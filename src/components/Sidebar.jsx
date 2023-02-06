@@ -1,3 +1,3 @@
 export const Sidebar = () => {
-  return <div>Sidebar</div>
+  return <div>Sideba1</div>
 }
