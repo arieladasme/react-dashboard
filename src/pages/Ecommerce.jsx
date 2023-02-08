@@ -1,7 +1,7 @@
 import { GoPrimitiveDot } from 'react-icons/go'
 import { Button, SparkLine } from '../components'
 import { earningData, SparklineAreaData } from '../data/dummy'
-console.log(SparklineAreaData)
+
 export const Ecommerce = () => {
   return (
     <div className=" mt-12">
@@ -90,6 +90,9 @@ export const Ecommerce = () => {
                   data={SparklineAreaData}
                   color="blue"
                 />
+              </div>
+              <div className="mt-10">
+                <Button color="white" bgColor="blue" text="Download Report" borderRadius="10px" />
               </div>
             </div>
           </div>
