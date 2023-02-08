@@ -1,3 +1,4 @@
+import { GoPrimitiveDot } from 'react-icons/go'
 import { Button } from '../components'
 import { earningData } from '../data/dummy'
 
@@ -16,6 +17,7 @@ export const Ecommerce = () => {
             <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md" />
           </div>
         </div>
+        {/* ITEMS */}
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
           {earningData.map(item => (
             <div
@@ -36,6 +38,51 @@ export const Ecommerce = () => {
               <p className="text-sm text-gray-400 mt-1">{item.title}</p>
             </div>
           ))}
+        </div>
+        {/* /ITEMS */}
+      </div>
+      <div className="flex gap-10 flex-wrap justify-center">
+        <div className=" bg-white dark:bg-secondary-dark-bg m-3 rounded-2xl md:w-780">
+          <div className="flex justify-between">
+            <p className="font-semibold text-xl">Revenue Updates</p>
+            <div className="flex items-center gap-4">
+              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Expense</span>
+              </p>
+
+              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Budget</span>
+              </p>
+            </div>
+          </div>
+          {/* REVENUE UPDATES */}
+          <div className="mt-10 flex gap-10 flex-wrap justify-center">
+            <div className="border-r-1 border-color m-4 pr-10">
+              <div>
+                <p>
+                  <span className="text-3xl font-semibold">$78,334</span>
+                  <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
+                    22%
+                  </span>
+                </p>
+                <p className="text-gray-500 mt-1">Budget</p>
+              </div>
+
+              <div className="mt-8">
+                <p>
+                  <span className="text-3xl font-semibold">$34,811</span>
+                </p>
+                <p className="text-gray-500 mt-1">Expense</p>
+              </div>
+            </div>
+          </div>
+          {/* /REVENUE UPDATES */}
         </div>
       </div>
     </div>
