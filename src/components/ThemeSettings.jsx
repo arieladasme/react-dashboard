@@ -1,4 +1,8 @@
+import { TooltipComponent } from '@syncfusion/ej2-react-popups'
+import { BsCheck } from 'react-icons/bs'
 import { MdOutlineCancel } from 'react-icons/md'
+
+import { themeColors } from '../data/dummy'
 
 export const ThemeSettings = () => {
   return (
@@ -49,6 +53,25 @@ export const ThemeSettings = () => {
             </label>
           </div>
           {/* /Dark */}
+        </div>
+        <div className="flex-col border-t-1 border-color p-4 ml-4">
+          <p className="font-semibold text-lg">Theme Colors</p>
+          <div className="flex gap-3">
+            {themeColors.map((item, index) => (
+              <TooltipComponent key={index} content={item.name} position="TopCenter">
+                <div className="relative mt-2 cursor-pointer flex gap-5 items-center">
+                  <button
+                    type="button"
+                    className="h-10 w-10 rounded-full cursor-pointer"
+                    style={{ backgroundColor: item.color }}
+                    onClick={() => {}}
+                  >
+                    <BsCheck className={`ml-2 text-2xl text-white ${true ? 'block' : 'hidden'}`} />
+                  </button>
+                </div>
+              </TooltipComponent>
+            ))}
+          </div>
         </div>
       </div>
     </div>
