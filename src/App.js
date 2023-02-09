@@ -23,7 +23,7 @@ import {
 import { useStateContext } from './contexts/ContextProvider'
 
 const App = () => {
-  const { activeMenu, themeSettings, setThemeSettings } = useStateContext()
+  const { activeMenu, themeSettings, setThemeSettings, currentColor } = useStateContext()
 
   return (
     <div>
@@ -34,7 +34,7 @@ const App = () => {
               <button
                 className="text-3x1 p-3 hover:drop-shadow-x1 hover:bg-light-gray text-white"
                 onClick={() => setThemeSettings(true)}
-                style={{ background: 'blue', borderRadius: '50%' }}
+                style={{ background: currentColor, borderRadius: '50%' }}
                 type="button"
               >
                 <FiSettings />
